@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>View Student</title>
+<link rel="stylesheet" href="../static/css/view-student.css">
+<link rel="stylesheet" th:href="@{/css/view-student.css}">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="outer">
+   <div class = "inner">
+       <nav>
+            
+            <h1>View Student</h1>
+            	<div class="links">
+            	<ul>
+                	<li> <a href="/">Home</a></li>
+                	<li> <a href="/add-student">Add Student</a></li>
+                	<li> <a href="/update-student">update Student</a></li>
+            	</ul>
+       			</div>
+       </nav>
+   </div>
+   <div class="container">
+  <div class="form" id="searchForm">
+    <h3>Search Student</h3>
+
+    
+    <select id="searchType">
+        <option value="">Choose Search Type</option>
+        <option value="id">Search by ID</option>
+        <option value="all">Search All</option>
+        <option value="email">Search by Email</option>
+        <option value="phone">Search by Phone</option>
+        <option value="dept">Search by Department</option>
+        <option value="name">Search by Name</option>
+        <option value="nameGender">Search by Name + Gender</option>
+        <option value="nameDept">Search by Name + Department</option>
+        <option value="deptGender">Search by Gender + Department</option>
+        <option value="all3">Name + Gender + Department</option>
+        <option value="phoneStart">Phone starting with</option>
+        <option value="nameContains">Name containing string</option>
+    </select>
+
+    <!-- Dynamic Fields Load Here -->
+    <div id="inputFields"></div>
+
+    <button id="searchBtn">Search</button>
+</div>
+    <div id="result-box" class="cards-wrapper"></div>
+   
+</div>
+<script th:src="@{/js/view-student.js}"></script>
+
+</body>
+</html>
